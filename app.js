@@ -603,7 +603,6 @@
         </aside>
       </div>`;
     bindVoiceActions(target);
-    autoSpeak(target);
   }
 
   function nextLearn() {

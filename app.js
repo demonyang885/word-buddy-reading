@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const STORAGE_KEY = "word-buddy-progress-v2";
+  const STORAGE_KEY = "word-buddy-challenge-3-progress-v1";
   const LEGACY_STORAGE_KEY = "word-buddy-progress-v1";
   const SETTINGS_KEY = "word-buddy-settings-v1";
   const CHALLENGE_LENGTH = 10;
@@ -13,7 +13,7 @@
   const meta = window.WORD_DATABASE_META || { label: "本地词库", note: "" };
 
   const defaultProgress = {
-    version: 2,
+    version: 3,
     totalAttempts: 0,
     correctAttempts: 0,
     daily: {},

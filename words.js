@@ -1,18 +1,15 @@
-/*
- * 词库文件
- * 收到原始 IMG_6355.heic 后，只需把下面数组替换为图片中的单词即可。
- * 页面其他功能不需要修改。
- */
+/* 英文大挑战（三）认读范围：按图片从左到右、从上到下排列。 */
 window.WORD_DATABASE = [
-  "apple", "baby", "ball", "bird", "blue", "book", "boy", "bread",
-  "cake", "cat", "chair", "cloud", "cow", "day", "dog", "door",
-  "duck", "egg", "eye", "fish", "flower", "friend", "green", "hand",
-  "happy", "home", "jump", "kite", "milk", "moon", "mother", "orange",
-  "play", "rain", "read", "red", "run", "school", "smile", "star",
-  "sun", "table", "tree", "water", "white", "window", "yellow", "zoo"
+  "run", "fly", "jump", "drink",
+  "food", "egg", "cake", "bread",
+  "rice", "milk", "candy", "noodle",
+  "fruit", "kiwi", "lemon", "grape",
+  "mango", "banana", "orange", "pineapple",
+  "animal", "panda", "zebra", "elephant",
+  "wolf", "tiger", "horse", "giraffe"
 ];
 
 window.WORD_DATABASE_META = {
-  label: "演示词库",
-  note: "当前使用 48 个儿童常用词验证功能；重新附上 IMG_6355.heic 后可替换为图片中的完整词库。"
+  label: "英文大挑战（三）认读范围",
+  note: "已按原图逐项核对，共 28 个单词。"
 };

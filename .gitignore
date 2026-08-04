@@ -1,0 +1,11 @@
+# Local-only server and progress files
+server.py
+setup.html
+启动单词星球.command
+data/
+certs/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

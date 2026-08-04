@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#fffaf1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>单词星球 · 儿童认读</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="回到认读模式">
+          <span class="brand-mark" aria-hidden="true">W</span>
+          <span>
+            <strong>单词星球</strong>
+            <small>Word Buddy</small>
+          </span>
+        </a>
+
+        <div class="header-actions">
+          <span class="sync-status" id="syncStatus" aria-live="polite">正在读取进度</span>
+          <div class="day-score" aria-label="今天的练习数量">
+            <span>今天</span>
+            <strong id="todayCount">0</strong>
+          </div>
+          <button class="record-button" id="recordButton" type="button">学习档案</button>
+          <button class="icon-button" id="settingsButton" type="button" aria-label="打开声音设置">
+            <span aria-hidden="true">Aa</span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="welcome-row" aria-labelledby="pageTitle">
+          <div>
+            <p class="eyebrow">每天十分钟 · 大声读出来</p>
+            <h1 id="pageTitle">今天想怎样学？</h1>
+          </div>
+          <div class="word-count-badge">
+            <strong id="wordCount">0</strong>
+            <span>个单词</span>
+          </div>
+        </section>
+
+        <nav class="mode-tabs" aria-label="学习模式">
+          <button class="mode-tab is-active" type="button" data-mode="learn" aria-pressed="true">
+            <span class="tab-number">01</span>
+            <span><strong>认读</strong><small>看一看，读一读</small></span>
+          </button>
+          <button class="mode-tab" type="button" data-mode="challenge" aria-pressed="false">
+            <span class="tab-number">02</span>
+            <span><strong>挑战</strong><small>看单词，独立读</small></span>
+          </button>
+          <button class="mode-tab" type="button" data-mode="review" aria-pressed="false">
+            <span class="tab-number">03</span>
+            <span><strong>巩固</strong><small>错词再练两遍</small></span>
+            <span class="mistake-badge" id="mistakeBadge" hidden>0</span>
+          </button>
+        </nav>
+
+        <section class="learning-panel" id="learningPanel" aria-live="polite"></section>
+
+        <section class="progress-card" aria-label="学习记录">
+          <div class="progress-heading">
+            <div>
+              <p class="eyebrow">我的足迹</p>
+              <h2>真正读出来，才算会</h2>
+            </div>
+            <div class="progress-actions">
+              <button class="text-button" id="openRecordsButton" type="button">查看全部单词</button>
+              <button class="text-button danger" id="clearMistakesButton" type="button">清空错词</button>
+            </div>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <strong id="masteredStat">0</strong>
+              <span>已经会读</span>
+            </div>
+            <div class="stat-item">
+              <strong id="answerStat">0</strong>
+              <span>开口尝试</span>
+            </div>
+            <div class="stat-item accent">
+              <strong id="accuracyStat">—</strong>
+              <span>认读正确率</span>
+            </div>
+            <div class="stat-item warm">
+              <strong id="mistakeStat">0</strong>
+              <span>待巩固</span>
+            </div>
+          </div>
+          <div class="mistake-strip" id="mistakeStrip"></div>
+        </section>
+
+        <p class="source-note" id="sourceNote"></p>
+      </main>
+    </div>
+
+    <div class="settings-backdrop" id="settingsBackdrop" hidden>
+      <section class="settings-sheet" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+        <div class="sheet-handle" aria-hidden="true"></div>
+        <div class="sheet-heading">
+          <div>
+            <p class="eyebrow">声音设置</p>
+            <h2 id="settingsTitle">让朗读更舒服</h2>
+          </div>
+          <button class="close-button" id="closeSettingsButton" type="button" aria-label="关闭设置">完成</button>
+        </div>
+
+        <label class="setting-row">
+          <span><strong>自动播读</strong><small>切换单词后自动朗读</small></span>
+          <input id="autoSpeakInput" type="checkbox" role="switch" checked />
+        </label>
+
+        <label class="setting-block" for="rateInput">
+          <span><strong>朗读速度</strong><output id="rateOutput">舒缓</output></span>
+          <input id="rateInput" type="range" min="0.6" max="1.1" step="0.1" value="0.8" />
+          <span class="range-labels"><small>慢一点</small><small>快一点</small></span>
+        </label>
+
+        <label class="setting-block" for="voiceSelect">
+          <span><strong>英语声音</strong></span>
+          <select id="voiceSelect">
+            <option value="">设备默认声音</option>
+          </select>
+        </label>
+
+        <button class="primary-button wide" id="testVoiceButton" type="button">试听：Hello!</button>
+      </section>
+    </div>
+
+    <div class="records-backdrop" id="recordsBackdrop" hidden>
+      <section class="records-sheet" role="dialog" aria-modal="true" aria-labelledby="recordsTitle">
+        <div class="sheet-handle" aria-hidden="true"></div>
+        <div class="sheet-heading records-heading">
+          <div>
+            <p class="eyebrow">逐词保存 · 随时续学</p>
+            <h2 id="recordsTitle">学习档案</h2>
+          </div>
+          <button class="close-button" id="closeRecordsButton" type="button" aria-label="关闭学习档案">完成</button>
+        </div>
+        <div class="record-filters" role="group" aria-label="筛选学习记录">
+          <button type="button" class="record-filter is-active" data-record-filter="all">全部</button>
+          <button type="button" class="record-filter" data-record-filter="mastered">已会读</button>
+          <button type="button" class="record-filter" data-record-filter="learning">练习中</button>
+          <button type="button" class="record-filter" data-record-filter="new">未开始</button>
+        </div>
+        <div class="record-summary" id="recordSummary"></div>
+        <div class="record-tools">
+          <button type="button" id="exportRecordsButton">导出学习档案</button>
+          <label>
+            恢复学习档案
+            <input type="file" id="importRecordsInput" accept="application/json,.json" />
+          </label>
+        </div>
+        <div class="record-list" id="recordList"></div>
+      </section>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="words.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

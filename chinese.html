@@ -6,22 +6,22 @@
     <meta name="theme-color" content="#fffaf1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <title>英文單詞星球 · 兒童認讀</title>
+    <title>中文字星球 · 兒童認字</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="chinese-course">
     <div class="page-shell">
       <header class="topbar">
         <a class="brand" href="#" aria-label="回到認讀模式">
-          <span class="brand-mark" aria-hidden="true">W</span>
+          <span class="brand-mark" aria-hidden="true">字</span>
           <span>
-            <strong>英文單詞星球</strong>
-            <small>Word Buddy</small>
+            <strong>中文字星球</strong>
+            <small>Hanzi Buddy</small>
           </span>
         </a>
 
         <div class="header-actions">
-          <a class="course-switch" href="chinese.html">中文認字</a>
+          <a class="course-switch" href="index.html">英文認詞</a>
           <span class="sync-status" id="syncStatus" aria-live="polite">正在讀取進度</span>
           <div class="day-score" aria-label="今天的練習數量">
             <span>今天</span>
@@ -38,12 +38,21 @@
         <section class="welcome-row" aria-labelledby="pageTitle">
           <div>
             <p class="eyebrow">每天十分鐘 · 大聲讀出來</p>
-            <h1 id="pageTitle">今天想怎樣學？</h1>
+            <h1 id="pageTitle">今天想怎樣認字？</h1>
           </div>
           <div class="word-count-badge">
             <strong id="wordCount">0</strong>
-            <span>個單詞</span>
+            <span>個字詞</span>
           </div>
+        </section>
+
+        <section class="section-bar" aria-label="選擇學習範圍">
+          <label for="sectionSelect">
+            <span><strong>學習範圍</strong><small>可按教材頁次練習</small></span>
+            <select id="sectionSelect">
+              <option value="all">全部範圍</option>
+            </select>
+          </label>
         </section>
 
         <nav class="mode-tabs" aria-label="學習模式">
@@ -53,11 +62,11 @@
           </button>
           <button class="mode-tab" type="button" data-mode="challenge" aria-pressed="false">
             <span class="tab-number">02</span>
-            <span><strong>挑戰</strong><small>看單詞，獨立讀</small></span>
+            <span><strong>挑戰</strong><small>看字詞，獨立讀</small></span>
           </button>
           <button class="mode-tab" type="button" data-mode="review" aria-pressed="false">
             <span class="tab-number">03</span>
-            <span><strong>鞏固</strong><small>錯誤單詞再練兩遍</small></span>
+            <span><strong>鞏固</strong><small>錯誤字詞再練兩遍</small></span>
             <span class="mistake-badge" id="mistakeBadge" hidden>0</span>
           </button>
         </nav>
@@ -71,7 +80,7 @@
               <h2>真正讀出來，才算會</h2>
             </div>
             <div class="progress-actions">
-              <button class="text-button" id="openRecordsButton" type="button">查看全部單詞</button>
+              <button class="text-button" id="openRecordsButton" type="button">查看全部字詞</button>
               <button class="text-button danger" id="clearMistakesButton" type="button">清空待鞏固項目</button>
             </div>
           </div>
@@ -106,13 +115,21 @@
         <div class="sheet-heading">
           <div>
             <p class="eyebrow">聲音設定</p>
-            <h2 id="settingsTitle">讓朗讀更舒服</h2>
+            <h2 id="settingsTitle">選擇孩子使用的讀音</h2>
           </div>
           <button class="close-button" id="closeSettingsButton" type="button" aria-label="關閉設定">完成</button>
         </div>
 
+        <label class="setting-block" for="speechLangSelect">
+          <span><strong>認讀語言</strong></span>
+          <select id="speechLangSelect">
+            <option value="zh-HK">粵語（香港）</option>
+            <option value="zh-TW">普通話（繁體）</option>
+          </select>
+        </label>
+
         <label class="setting-row">
-          <span><strong>鞏固自動播讀</strong><small>切換待鞏固單詞後自動朗讀</small></span>
+          <span><strong>鞏固自動播讀</strong><small>切換待鞏固字詞後自動朗讀</small></span>
           <input id="autoSpeakInput" type="checkbox" role="switch" checked />
         </label>
 
@@ -123,13 +140,13 @@
         </label>
 
         <label class="setting-block" for="voiceSelect">
-          <span><strong>英文聲音</strong></span>
+          <span><strong>朗讀聲音</strong></span>
           <select id="voiceSelect">
             <option value="">裝置預設聲音</option>
           </select>
         </label>
 
-        <button class="primary-button wide" id="testVoiceButton" type="button">試聽：Hello!</button>
+        <button class="primary-button wide" id="testVoiceButton" type="button">試聽：大家好！</button>
       </section>
     </div>
 
@@ -138,8 +155,8 @@
         <div class="sheet-handle" aria-hidden="true"></div>
         <div class="sheet-heading records-heading">
           <div>
-            <p class="eyebrow">逐詞儲存 · 隨時續學</p>
-            <h2 id="recordsTitle">學習檔案</h2>
+            <p class="eyebrow">逐項儲存 · 隨時續學</p>
+            <h2 id="recordsTitle">中文認字學習檔案</h2>
           </div>
           <button class="close-button" id="closeRecordsButton" type="button" aria-label="關閉學習檔案">完成</button>
         </div>
@@ -163,7 +180,7 @@
 
     <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-    <script src="words.js"></script>
+    <script src="chinese-words.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

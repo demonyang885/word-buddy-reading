@@ -13,7 +13,7 @@
     .quiz{min-height:100svh;padding-bottom:max(20px,env(safe-area-inset-bottom));display:grid;grid-template-rows:auto 5px 1fr auto;background:#f9fbfa}.qhead{height:74px;padding:max(14px,env(safe-area-inset-top)) max(26px,env(safe-area-inset-right)) 12px max(26px,env(safe-area-inset-left));display:flex;align-items:center;justify-content:space-between;background:#fff}.qcount{color:var(--muted);font-size:15px;font-weight:700}.timer{min-width:88px;height:42px;padding:0 14px;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:22px;color:var(--green);background:var(--mint);font-size:20px;font-weight:850;font-variant-numeric:tabular-nums}.timer.wait{min-width:112px;font-size:13px}.timer.urgent{color:#fff;background:var(--danger);animation:pulse 1s infinite}@keyframes pulse{50%{transform:scale(1.04)}}.track{background:#e7eeeb;overflow:hidden}.track i{display:block;height:100%;background:linear-gradient(90deg,var(--green),#45a58c);transition:width .35s ease}.panel{width:min(940px,calc(100% - 48px));margin:auto;padding:clamp(22px,4vh,44px) 0;text-align:center}.pill{display:inline-flex;padding:7px 14px;color:var(--green);background:var(--mint);border-radius:999px;font-size:13px;font-weight:800}.level{margin-left:8px;color:#8b6b20;background:#fff1c8}.instruction{margin:16px 0 4px;color:var(--muted);font-size:clamp(17px,2.4vw,21px)}.panel h1{margin:12px auto 22px;font-size:clamp(30px,5vw,48px);line-height:1.2;letter-spacing:-.025em}.audio{min-height:58px;margin:-1px 0 14px;padding:0 26px;border:2px solid var(--green);border-radius:999px;color:#fff;background:var(--green);font-weight:850;box-shadow:0 8px 20px rgba(15,107,91,.16)}.audio.playing{color:var(--green);background:var(--mint);box-shadow:none}.audio-note{margin:-2px 0 17px;color:var(--muted);font-size:12px}.choices{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.choices button{min-height:92px;padding:15px 22px;display:flex;align-items:center;gap:18px;border:2px solid var(--line);border-radius:20px;color:var(--ink);background:#fff;box-shadow:0 5px 16px rgba(32,58,54,.05);font-size:clamp(20px,3vw,27px);font-weight:700;text-align:left}.choices button:active:not(:disabled){border-color:var(--green);background:var(--mint);transform:scale(.99)}.choices button:disabled{opacity:.38}.letter{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:50%;color:var(--green);background:var(--mint);font-size:17px;font-weight:900}.choices.long button{min-height:98px;font-size:clamp(17px,2.6vw,22px)}.qfoot{min-height:60px;padding:8px max(26px,env(safe-area-inset-right)) 8px max(26px,env(safe-area-inset-left));display:flex;align-items:center;justify-content:space-between;color:var(--muted);background:#fff;border-top:1px solid var(--line);font-size:13px}.qfoot button{border:0;color:var(--muted);background:transparent;text-decoration:underline}
     .score{--score:0deg;width:164px;height:164px;margin:26px auto 18px;padding:13px;border-radius:50%;background:conic-gradient(var(--green) var(--score),var(--mint) 0)}.score>div{width:100%;height:100%;display:grid;place-content:center;border-radius:50%;background:#fff}.score strong{font-size:52px;line-height:.9}.score span{color:var(--muted);font-size:16px}.message{margin:0 auto 24px;color:var(--muted)}.catgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.catgrid>div{padding:15px 12px;border-radius:14px;background:#f5faf8;text-align:left}.catgrid span{display:block;color:var(--muted);font-size:12px}.catgrid strong{display:block;margin:4px 0 9px;font-size:20px}.minibar{height:5px;border-radius:5px;background:var(--line);overflow:hidden}.minibar i{display:block;height:100%;border-radius:inherit;background:var(--green)}.review{margin-top:26px;text-align:left}.review h2{font-size:18px}.review details{margin-top:8px;padding:14px 16px;border:1px solid var(--line);border-radius:13px;background:#fff}.review summary{display:flex;justify-content:space-between;cursor:pointer;font-size:14px}.review summary b{color:var(--green)}.review .wrong summary b{color:var(--danger)}.review details p{margin:10px 0 0;color:var(--muted);font-size:13px}.actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
     @media(max-width:620px){.card{border-radius:24px}.choices{grid-template-columns:1fr;gap:11px}.choices button{min-height:72px}.panel{width:min(100% - 28px,940px);padding:22px 0}.catgrid{grid-template-columns:repeat(2,1fr)}.voice-tests{grid-template-columns:1fr}.qhead{height:68px}}@media(orientation:landscape) and (max-height:720px){.qhead{height:60px}.panel{padding:14px 0}.instruction{margin-top:8px}.panel h1{margin:5px auto 12px;font-size:clamp(27px,4vw,38px)}.audio{min-height:44px;margin-bottom:8px}.audio-note{margin-bottom:10px}.choices button{min-height:66px}.choices.long button{min-height:72px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-    .reading-card{max-width:680px;margin:0 auto 18px;padding:22px;border:2px solid var(--mint);border-radius:22px;background:#f7fbf9}.mic{min-width:230px;min-height:62px;border:0;border-radius:999px;color:#fff;background:var(--green);font-size:18px;font-weight:850;box-shadow:0 8px 20px rgba(15,107,91,.18)}.mic.listening{background:var(--danger);animation:pulse 1s infinite}.read-status{min-height:22px;margin:14px 0 0;color:var(--muted);font-size:14px}.read-fallback{display:none;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.read-fallback.show{display:grid}.read-fallback button{min-height:48px;border:1px solid var(--line);border-radius:14px;color:var(--green);background:#fff;font-weight:750}
+    .reading-card{max-width:680px;margin:0 auto 18px;padding:22px;border:2px solid var(--mint);border-radius:22px;background:#f7fbf9}.mic{min-width:230px;min-height:62px;border:0;border-radius:999px;color:#fff;background:var(--green);font-size:18px;font-weight:850;box-shadow:0 8px 20px rgba(15,107,91,.18)}.mic.listening{background:var(--danger);animation:pulse 1s infinite}.read-status{min-height:22px;margin:14px 0 0;color:var(--muted);font-size:15px;font-weight:700}.read-status.ok{color:var(--green)}.read-status.bad{color:var(--danger)}.heard-text{min-height:20px;margin:8px 0 0;color:var(--muted);font-size:13px}
   </style>
 </head>
 <body><main id="app"></main>
@@ -28,12 +28,24 @@ const BANK=[
 {id:'z7',c:'中文',d:3,i:'選出最適合的詞語',p:'妹妹收到生日禮物，心裏十分＿＿。',o:['愉快','生氣','害怕','疲倦'],a:0,s:28,n:'中文詞義及情境理解'},
 {id:'z8',c:'中文',d:3,i:'閱讀句子後回答問題',p:'小明先洗手，然後才吃午餐。小明先做甚麼？',o:['吃午餐','洗手','收拾書包','喝水'],a:1,s:30,n:'中文句子理解及先後次序'},
 {id:'z9',c:'中文',d:3,i:'選出不同類別的一項',p:'哪一個不是水果？',o:['蘋果','香蕉','胡蘿蔔','橙'],a:2,s:24,n:'中文分類及生活常識'},
+{id:'z10',c:'中文',d:1,i:'按播放鍵，選出老師讀出的詞語',p:'請留心聆聽',o:['文俱','文具','聞具','文巨'],a:1,s:60,v:['文具','zh-HK'],n:'中文聆聽及字形辨識'},
+{id:'z11',c:'中文',d:1,i:'看圖選出正確詞語',p:'🍇',o:['葡匋','菩萄','葡萄','蒲桃'],a:2,s:60,n:'圖像與中文詞語配對'},
+{id:'z12',c:'中文',d:2,i:'找出有錯別字的句子',p:'哪一句寫錯了？',o:['我每天準時回校。','老師正在派發工作紙。','小朋友在操場上跳繩子。','哥哥把圖書放進書包裏。'],a:2,s:60,n:'中文閱讀及錯別字'},
+{id:'z13',c:'中文',d:2,i:'按播放鍵，選出老師讀出的詞語',p:'請留心聆聽',o:['圖書管','圖書館','圗書館','圖館書'],a:1,s:60,v:['圖書館','zh-HK'],n:'中文聆聽及相似字辨識'},
+{id:'z14',c:'中文',d:3,i:'閱讀短文後回答問題',p:'樂樂看見同學沒有鉛筆，便把自己的鉛筆借給她。樂樂是一個怎樣的孩子？',o:['自私','樂於助人','膽小','粗心'],a:1,s:60,n:'中文閱讀及人物品格'},
+{id:'z15',c:'中文',d:3,i:'選出正確的先後次序',p:'回家後，我洗手、吃茶點，然後做家課。第二件事是甚麼？',o:['做家課','吃茶點','洗手','上學'],a:1,s:60,n:'中文閱讀及先後次序'},
 {id:'r1',c:'中文',d:1,r:true,i:'請清楚朗讀下面的句子',p:'我們在公園玩耍。',o:['需重讀','朗讀完成'],a:1,s:30,n:'中文句子朗讀'},
 {id:'r2',c:'中文',d:1,r:true,i:'請清楚朗讀下面的句子',p:'妹妹喜歡吃香甜的草莓。',o:['需重讀','朗讀完成'],a:1,s:30,n:'中文句子朗讀'},
 {id:'r3',c:'中文',d:2,r:true,i:'請清楚朗讀下面的句子',p:'小鳥在藍色的天空中飛翔。',o:['需重讀','朗讀完成'],a:1,s:32,n:'中文句子朗讀'},
 {id:'r4',c:'中文',d:2,r:true,i:'請清楚朗讀下面的句子',p:'放學後，我先完成家課，然後才玩耍。',o:['需重讀','朗讀完成'],a:1,s:35,n:'中文句子朗讀'},
 {id:'r5',c:'中文',d:3,r:true,i:'請清楚朗讀下面的句子',p:'下雨的時候，我會帶雨傘，也會小心地走路。',o:['需重讀','朗讀完成'],a:1,s:38,n:'中文句子朗讀'},
 {id:'r6',c:'中文',d:3,r:true,i:'請清楚朗讀下面的句子',p:'如果同學忘記帶鉛筆，我願意把自己的文具借給她。',o:['需重讀','朗讀完成'],a:1,s:42,n:'中文句子朗讀'},
+{id:'r7',c:'中文',d:1,r:true,i:'請清楚朗讀下面的句子',p:'今天的天氣很好。',o:['需重讀','朗讀完成'],a:1,s:60,n:'中文句子朗讀'},
+{id:'r8',c:'中文',d:1,r:true,i:'請清楚朗讀下面的句子',p:'哥哥和我一起畫畫。',o:['需重讀','朗讀完成'],a:1,s:60,n:'中文句子朗讀'},
+{id:'r9',c:'中文',d:2,r:true,i:'請清楚朗讀下面的句子',p:'媽媽準備了新鮮的水果。',o:['需重讀','朗讀完成'],a:1,s:60,n:'中文句子朗讀'},
+{id:'r10',c:'中文',d:2,r:true,i:'請清楚朗讀下面的句子',p:'同學們安靜地排隊進入課室。',o:['需重讀','朗讀完成'],a:1,s:60,n:'中文句子朗讀'},
+{id:'r11',c:'中文',d:3,r:true,i:'請清楚朗讀下面的句子',p:'雖然今天下着大雨，但是我們仍然準時回到學校。',o:['需重讀','朗讀完成'],a:1,s:60,n:'中文句子朗讀'},
+{id:'r12',c:'中文',d:3,r:true,i:'請清楚朗讀下面的句子',p:'參觀圖書館時，我們不但要保持安靜，還要愛惜書本。',o:['需重讀','朗讀完成'],a:1,s:60,n:'中文句子朗讀'},
 {id:'e1',c:'英文',d:1,i:'Listen and choose the correct picture.',p:'Tap the answer after listening.',o:['☂️','🎒','✏️','⚽️'],a:0,s:20,v:['Umbrella.','en-GB'],n:'英文聆聽及圖片配對'},
 {id:'e2',c:'英文',d:1,i:'Listen and choose the correct meaning.',p:'Where is the cat?',o:['小貓在桌子下面','小貓在桌子上面','小貓在門旁邊','小貓在椅子後面'],a:0,s:24,v:['The cat is under the table.','en-GB'],n:'英文位置詞理解'},
 {id:'e3',c:'英文',d:1,i:'Listen and choose the correct group.',p:'Tap the answer after listening.',o:['★  ○  □','○  ★  □','○  □  ★','□  ○  ★'],a:1,s:22,v:['Tap the group with a star between a circle and a square.','en-GB'],n:'英文指令及位置概念'},
@@ -43,6 +55,12 @@ const BANK=[
 {id:'e7',c:'英文',d:3,i:'Listen to the story and answer.',p:'Why did Mia share her umbrella?',o:['It was very sunny.','Her friend was getting wet.','She wanted a new umbrella.','She was walking alone.'],a:1,s:34,v:['Mia was walking to school when it started to rain. She saw Lily without an umbrella. Mia invited Lily to walk under her umbrella. Why did Mia share her umbrella?','en-GB'],n:'英文故事因果理解'},
 {id:'e8',c:'英文',d:3,i:'Listen to the story and answer.',p:'What did Ben put in his bag?',o:['A toy and a hat.','A book and a bottle.','An apple and a ball.','A pencil and a coat.'],a:1,s:34,v:['Ben put a book and a bottle of water into his bag. Then he waved goodbye and left for school. What did Ben put in his bag?','en-GB'],n:'英文故事細節理解'},
 {id:'e9',c:'英文',d:3,i:'Listen and think carefully.',p:'Why did Lucy take an umbrella?',o:['She saw dark clouds.','She wanted to play football.','She felt hungry.','She lost her school bag.'],a:0,s:34,v:['Lucy looked outside and saw dark clouds. Before leaving home, she took an umbrella. Why did Lucy take an umbrella?','en-GB'],n:'英文故事推理'},
+{id:'e10',c:'英文',d:1,i:'Listen and choose the correct picture.',p:'Tap the answer after listening.',o:['🔴','🔵','🟢','🟡'],a:0,s:60,v:['Touch the red circle.','en-GB'],n:'英文顏色及圖形指令'},
+{id:'e11',c:'英文',d:1,i:'Listen and count carefully.',p:'Which group has three pencils?',o:['✏️','✏️✏️','✏️✏️✏️','✏️✏️✏️✏️'],a:2,s:60,v:['Touch the group with three pencils.','en-GB'],n:'英文數量指令'},
+{id:'e12',c:'英文',d:2,i:'Listen and choose the correct spelling.',p:'Which word did you hear?',o:['school','shcool','scool','scholl'],a:0,s:60,v:['School.','en-GB'],n:'英文聆聽及拼字辨識'},
+{id:'e13',c:'英文',d:2,i:'Listen carefully, then choose.',p:'⭐　🔺　⚪　⬛',o:['⭐ Star','🔺 Triangle','⚪ Circle','⬛ Square'],a:2,s:60,v:['Touch the circle after the triangle.','en-GB'],n:'英文雙步指令及位置概念'},
+{id:'e14',c:'英文',d:3,i:'Listen to the story and answer.',p:'Where did Tom put the wet coat?',o:['On his bed.','Near the window.','Inside his school bag.','Under the table.'],a:1,s:60,v:['Tom came home in the rain. His coat was wet, so he hung it near the window to dry. Where did Tom put the wet coat?','en-GB'],n:'英文故事細節理解'},
+{id:'e15',c:'英文',d:3,i:'Listen to the story and answer.',p:'Why did Anna walk quietly?',o:['The baby was sleeping.','She was angry.','She lost her shoes.','The floor was wet.'],a:0,s:60,v:['Anna saw that her baby brother was sleeping. She closed the door gently and walked quietly across the room. Why did Anna walk quietly?','en-GB'],n:'英文故事因果推理'},
 {id:'m1',c:'數學',d:1,i:'選出正確答案',p:'5 + 4 = ?',o:['7','8','9','10'],a:2,s:17,n:'20以內加法'},
 {id:'m2',c:'數學',d:1,i:'選出正確答案',p:'12 − 3 = ?',o:['7','8','9','10'],a:2,s:17,n:'20以內減法'},
 {id:'m3',c:'數學',d:1,i:'選出最大的數字',p:'Which number is the greatest?',o:['7','13','9','11'],a:1,s:17,n:'數量及大小比較'},
@@ -52,6 +70,12 @@ const BANK=[
 {id:'m7',c:'數學',d:3,i:'🍎代表3，🍌代表5',p:'🍎 + 🍎 + 🍌 = ?',o:['8','10','11','13'],a:2,s:27,n:'等量代換'},
 {id:'m8',c:'數學',d:3,i:'閱讀後選出正確答案',p:'妹妹有12張貼紙，送給朋友4張，還有多少張？',o:['6','7','8','9'],a:2,s:28,n:'減法應用題'},
 {id:'m9',c:'數學',d:3,i:'選出答案等於15的算式',p:'Which one equals 15?',o:['6 + 7','7 + 8','9 + 5','10 + 4'],a:1,s:27,n:'運算比較'},
+{id:'m10',c:'數學',d:1,i:'選出正確答案',p:'7 + 5 = ?',o:['10','11','12','13'],a:2,s:60,n:'20以內加法'},
+{id:'m11',c:'數學',d:1,i:'選出最小的數字',p:'Which number is the smallest?',o:['6','12','9','15'],a:0,s:60,n:'數量及大小比較'},
+{id:'m12',c:'數學',d:2,i:'找出欠缺的數字',p:'？ + 7 = 16',o:['7','8','9','10'],a:2,s:60,n:'缺數運算'},
+{id:'m13',c:'數學',d:2,i:'閱讀後選出正確答案',p:'桌上有9個橙，再放上6個，現在共有多少個？',o:['13','14','15','16'],a:2,s:60,n:'加法應用題'},
+{id:'m14',c:'數學',d:3,i:'🍓代表4，🍇代表2',p:'🍓 + 🍇 + 🍇 = ?',o:['6','7','8','10'],a:2,s:60,n:'等量代換'},
+{id:'m15',c:'數學',d:3,i:'比較兩個算式',p:'哪一個算式的答案最大？',o:['9 + 5','18 − 3','7 + 9','20 − 5'],a:2,s:60,n:'運算比較'},
 {id:'l1',c:'邏輯',d:1,i:'選出最長的一條線',p:'Which line is the longest?',o:['━━━━━━','━━━━━━━━━━','━━━━','━━━━━━━━'],a:1,s:18,n:'長短比較'},
 {id:'l2',c:'邏輯',d:1,i:'找出不同類別的一項',p:'Which one is different?',o:['🍎','🍌','🥕','🍊'],a:2,s:18,n:'圖像分類'},
 {id:'l3',c:'邏輯',d:1,i:'找出圖形規律',p:'○　△　○　△　？',o:['○','□','★','◇'],a:0,s:18,n:'圖形規律'},
@@ -61,6 +85,12 @@ const BANK=[
 {id:'l7',c:'邏輯',d:3,i:'由小至大排列數字',p:'哪一組次序正確？',o:['3，7，9，12','3，9，7，12','12，9，7，3','7，3，9，12'],a:0,s:24,n:'數字排序'},
 {id:'l8',c:'邏輯',d:3,i:'觀察位置後回答',p:'🐶　🐱　🐰　誰在小貓的右邊？',o:['小狗','小兔','小貓','沒有動物'],a:1,s:24,n:'左右位置概念'},
 {id:'l9',c:'邏輯',d:3,i:'根據資料作出推理',p:'Amy比Bea高，Bea比Cara高。誰最高？',o:['Amy','Bea','Cara','三人一樣高'],a:0,s:28,n:'關係推理'}
+,{id:'l10',c:'邏輯',d:1,i:'找出不同類別的一項',p:'Which one is different?',o:['🐶','🐱','🐰','🍎'],a:3,s:60,n:'圖像分類'}
+,{id:'l11',c:'邏輯',d:1,i:'找出圖形規律',p:'⭐　⚪　⭐　⚪　？',o:['⭐','🔺','⬛','◆'],a:0,s:60,n:'圖形規律'}
+,{id:'l12',c:'邏輯',d:2,i:'找出數字規律',p:'5，10，15，20，？',o:['21','23','25','30'],a:2,s:60,n:'數字規律'}
+,{id:'l13',c:'邏輯',d:2,i:'觀察位置後回答',p:'🍎　🍌　🍇　🍊　誰在香蕉和橙之間？',o:['蘋果','香蕉','葡萄','橙'],a:2,s:60,n:'位置及中間概念'}
+,{id:'l14',c:'邏輯',d:3,i:'根據資料作出推理',p:'紅盒比藍盒重，黃盒比紅盒重。哪個盒最重？',o:['紅盒','藍盒','黃盒','一樣重'],a:2,s:60,n:'關係推理'}
+,{id:'l15',c:'邏輯',d:3,i:'找出數字規律',p:'1，2，4，7，11，？',o:['14','15','16','17'],a:2,s:60,n:'遞增規律'}
 ];
 
 const app=document.getElementById('app');
@@ -77,7 +107,7 @@ function welcome(){
   audioToken++;clearInterval(timer);stopReading();
   if('speechSynthesis'in window)speechSynthesis.cancel();
   const h=history();
-  app.innerHTML=`<section class="shell welcome"><div class="card"><div class="mark">GH</div><p class="eyebrow">2026 · P1 INTERVIEW PRACTICE</p><h1>德望 iPad 模擬測試</h1><p class="intro">根據歷年題型建立42題分級題庫，每次均衡抽取12題，並保證包含中文聆聽及句子朗讀。語音播放和朗讀期間均不計時。</p><label class="name"><span>小朋友姓名</span><input id="name" value="${esc(name)}" autocomplete="off"></label><label class="setting"><span>語音速度</span><select id="speed"><option value="clear" ${speed==='clear'?'selected':''}>清晰慢速（建議先使用）</option><option value="normal" ${speed==='normal'?'selected':''}>正常面試速度</option></select></label><div class="voice-tests"><button id="zhSample">🔊 中文試聽</button><button id="enSample">🔊 English test</button></div><div class="facts"><div><strong>42</strong><span>分級題庫</span></div><div><strong>12</strong><span>每次抽題</span></div><div><strong>1</strong><span>必出朗讀題</span></div></div><button class="primary" id="start">開始模擬測試</button><p class="privacy">首次朗讀時請允許Safari使用咪高峰；測試紀錄只保存在這部iPad。</p>${h.length?`<div class="history"><div class="history-head"><h2>最近紀錄</h2><button id="clear">清除</button></div>${h.slice(0,3).map(x=>`<div class="history-row"><span>${esc(x.d)}</span><strong>${x.score}/12</strong></div>`).join('')}</div>`:''}</div></section>`;
+  app.innerHTML=`<section class="shell welcome"><div class="card"><div class="mark">GH</div><p class="eyebrow">2026 · P1 INTERVIEW PRACTICE</p><h1>德望 iPad 模擬測試</h1><p class="intro">根據歷年題型建立72題分級題庫，每次均衡抽取12題，並保證包含中文聆聽及句子朗讀。每題限時60秒；語音播放和朗讀期間不計時。</p><label class="name"><span>小朋友姓名</span><input id="name" value="${esc(name)}" autocomplete="off"></label><label class="setting"><span>語音速度</span><select id="speed"><option value="clear" ${speed==='clear'?'selected':''}>清晰慢速（建議先使用）</option><option value="normal" ${speed==='normal'?'selected':''}>正常面試速度</option></select></label><div class="voice-tests"><button id="zhSample">🔊 中文試聽</button><button id="enSample">🔊 English test</button></div><div class="facts"><div><strong>72</strong><span>分級題庫</span></div><div><strong>60秒</strong><span>每題限時</span></div><div><strong>自動</strong><span>朗讀評分</span></div></div><button class="primary" id="start">開始模擬測試</button><p class="privacy">首次朗讀時請允許Safari使用咪高峰；系統會直接判定朗讀結果，紀錄只保存在這部iPad。</p>${h.length?`<div class="history"><div class="history-head"><h2>最近紀錄</h2><button id="clear">清除</button></div>${h.slice(0,3).map(x=>`<div class="history-row"><span>${esc(x.d)}</span><strong>${x.score}/12</strong></div>`).join('')}</div>`:''}</div></section>`;
   document.getElementById('speed').onchange=e=>{speed=e.target.value;localStorage.setItem('gh-speed',speed)};
   document.getElementById('zhSample').onclick=()=>sample('zh-HK');
   document.getElementById('enSample').onclick=()=>sample('en-GB');
@@ -93,42 +123,44 @@ function stopReading(){
 function normaliseReading(text){return String(text||'').toLowerCase().replace(/裏/g,'裡').replace(/[，。！？、,.!?\s]/g,'')}
 function editDistance(a,b){const x=[...a],y=[...b],row=Array(y.length+1).fill(0).map((_,i)=>i);for(let i=1;i<=x.length;i++){let prev=row[0];row[0]=i;for(let j=1;j<=y.length;j++){const old=row[j];row[j]=Math.min(row[j]+1,row[j-1]+1,prev+(x[i-1]===y[j-1]?0:1));prev=old}}return row[y.length]}
 function readingScore(spoken,target){const a=normaliseReading(spoken),b=normaliseReading(target);if(!a||!b)return 0;return 1-editDistance(a,b)/Math.max(a.length,b.length)}
-function showReadFallback(message){
-  const status=document.getElementById('readStatus'),fallback=document.getElementById('readFallback'),mic=document.getElementById('mic');
-  if(status)status.textContent=message||'未能清楚收錄，請再試一次。';
-  if(fallback)fallback.classList.add('show');
-  if(mic){mic.classList.remove('listening');mic.disabled=false;mic.textContent='🎙️ 再讀一次'}
+function finishReading(passed,transcript,score=0){
+  if(locked)return;
+  const mic=document.getElementById('mic'),status=document.getElementById('readStatus'),heardBox=document.getElementById('heardText');
+  if(mic){mic.classList.remove('listening');mic.disabled=true;mic.textContent=passed?'✓ 朗讀正確':'✕ 需要重讀'}
+  if(status){status.className=`read-status ${passed?'ok':'bad'}`;status.textContent=passed?`系統判定：正確（${Math.round(score*100)}%）`:`系統判定：需重讀（${Math.round(score*100)}%）`}
+  if(heardBox)heardBox.textContent=`系統聽到：${transcript||'未能辨識'}`;
+  clearTimeout(readStopTimer);activeRecognition=null;
+  setTimeout(()=>choose(passed?1:0,transcript||'未能辨識'),1200);
 }
 function startReading(){
   if(locked)return;
   const Recognition=window.SpeechRecognition||window.webkitSpeechRecognition;
-  if(!Recognition){showReadFallback('這部iPad未能啟用語音識別，請由家長確認朗讀。');return}
+  if(!Recognition){finishReading(false,'此瀏覽器不支援語音辨識',0);return}
   stopReading();
-  const q=Q[at],mic=document.getElementById('mic'),status=document.getElementById('readStatus'),fallback=document.getElementById('readFallback');
-  if(fallback)fallback.classList.remove('show');
+  const q=Q[at],mic=document.getElementById('mic'),status=document.getElementById('readStatus'),heardBox=document.getElementById('heardText');
   const recognition=new Recognition();activeRecognition=recognition;
-  let captured=false;
+  let captured=false,finished=false;
   recognition.lang='zh-HK';recognition.continuous=false;recognition.interimResults=false;recognition.maxAlternatives=5;
-  recognition.onstart=()=>{mic.disabled=true;mic.classList.add('listening');mic.textContent='● 正在聆聽…';status.textContent='請由頭至尾清楚朗讀句子';document.getElementById('timer').textContent='朗讀時不計時'};
-  recognition.onresult=event=>{captured=true;const alternatives=Array.from(event.results[0]).map(x=>x.transcript);const best=alternatives.sort((a,b)=>readingScore(b,q.p)-readingScore(a,q.p))[0]||'';const passed=readingScore(best,q.p)>=.7;mic.classList.remove('listening');mic.textContent='✓ 已收錄';status.textContent='已完成朗讀，正在前往下一題…';clearTimeout(readStopTimer);activeRecognition=null;setTimeout(()=>choose(passed?1:0,best),550)};
-  recognition.onerror=()=>{if(!captured)showReadFallback('未能清楚收錄，請再試一次或由家長確認。')};
-  recognition.onend=()=>{clearTimeout(readStopTimer);activeRecognition=null;if(!captured&&!locked)showReadFallback('沒有聽到完整句子，請再試一次。')};
-  try{recognition.start();readStopTimer=setTimeout(()=>{try{recognition.stop()}catch(e){}},12000)}catch(e){showReadFallback('咪高峰未能啟動，請再試一次。')}
+  recognition.onstart=()=>{mic.disabled=true;mic.classList.add('listening');mic.textContent='● 正在聆聽…';status.className='read-status';status.textContent='請由頭至尾清楚朗讀句子';heardBox.textContent='';document.getElementById('timer').textContent='朗讀時不計時'};
+  recognition.onresult=event=>{captured=true;finished=true;const alternatives=Array.from(event.results[0]).map(x=>x.transcript);const best=alternatives.sort((a,b)=>readingScore(b,q.p)-readingScore(a,q.p))[0]||'';const score=readingScore(best,q.p);finishReading(score>=.72,best,score)};
+  recognition.onerror=()=>{if(!captured&&!finished){finished=true;finishReading(false,'未能辨識',0)}};
+  recognition.onend=()=>{clearTimeout(readStopTimer);activeRecognition=null;if(!captured&&!finished&&!locked){finished=true;finishReading(false,'沒有聽到完整句子',0)}};
+  try{recognition.start();readStopTimer=setTimeout(()=>{try{recognition.stop()}catch(e){}},15000)}catch(e){finishReading(false,'咪高峰未能啟動',0)}
 }
 function showQ(){
   audioToken++;clearInterval(timer);stopReading();
   if('speechSynthesis'in window)speechSynthesis.cancel();
   locked=false;audioPlayed=false;
-  const q=Q[at];left=q.s;
+  const q=Q[at];left=60;
   const long=!q.r&&q.o.some(x=>x.length>18);
   const response=q.r
-    ? `<div class="reading-card"><button class="mic" id="mic">🎙️ 開始朗讀</button><p class="read-status" id="readStatus">按下後，看到紅點才開始讀</p><div class="read-fallback" id="readFallback"><button id="readRetry">再讀一次</button><button id="readConfirm">家長確認已朗讀</button></div></div>`
+    ? `<div class="reading-card"><button class="mic" id="mic">🎙️ 開始朗讀</button><p class="read-status" id="readStatus">按下後，看到紅點才開始讀；系統會自動評分</p><p class="heard-text" id="heardText"></p></div>`
     : `${q.v?'<button class="audio" id="audio">🔊 播放題目</button><p class="audio-note">播放期間不計時；聽完後才可選擇答案</p>':''}<div class="choices ${long?'long':''}">${q.o.map((x,i)=>`<button data-i="${i}" ${q.v?'disabled':''}><span class="letter">${String.fromCharCode(65+i)}</span><span>${esc(x)}</span></button>`).join('')}</div>`;
   const waiting=q.v||q.r;
-  app.innerHTML=`<section class="quiz"><header class="qhead"><div class="qcount">第 ${at+1} / ${Q.length} 題</div><div class="timer ${waiting?'wait':''}" id="timer">${q.r?'等待朗讀':q.v?'等待播放':`◷ <span>${left}</span>`}</div></header><div class="track"><i style="width:${(at+1)/Q.length*100}%"></i></div><div class="panel"><div><span class="pill">${q.c}</span><span class="pill level">難度 ${q.d}</span></div><p class="instruction">${esc(q.i)}</p><h1>${esc(q.p)}</h1>${response}</div><footer class="qfoot"><span>${q.r?'首次使用請允許Safari使用咪高峰':q.v?'請先播放並聽完整條題目':'請選出一個答案'}</span><button id="skip" ${q.v?'disabled':''}>${q.r?'咪高峰有問題':'跳過此題'}</button></footer></section>`;
+  app.innerHTML=`<section class="quiz"><header class="qhead"><div class="qcount">第 ${at+1} / ${Q.length} 題</div><div class="timer ${waiting?'wait':''}" id="timer">${q.r?'等待朗讀':q.v?'等待播放':`◷ <span>${left}</span>`}</div></header><div class="track"><i style="width:${(at+1)/Q.length*100}%"></i></div><div class="panel"><div><span class="pill">${q.c}</span><span class="pill level">難度 ${q.d}</span></div><p class="instruction">${esc(q.i)}</p><h1>${esc(q.p)}</h1>${response}</div><footer class="qfoot"><span>${q.r?'首次使用請允許Safari使用咪高峰；系統自動評分':q.v?'播放完畢後開始60秒計時':'每題限時60秒'}</span>${q.r?'':'<button id="skip" '+(q.v?'disabled':'')+'>跳過此題</button>'}</footer></section>`;
   document.querySelectorAll('.choices button').forEach(b=>b.onclick=()=>choose(Number(b.dataset.i)));
-  document.getElementById('skip').onclick=q.r?()=>showReadFallback('請再試一次，或由家長確認朗讀已完成。'):()=>choose(null);
-  if(q.r){document.getElementById('mic').onclick=startReading;document.getElementById('readRetry').onclick=startReading;document.getElementById('readConfirm').onclick=()=>choose(1,'家長確認已完成')}
+  const skip=document.getElementById('skip');if(skip)skip.onclick=()=>choose(null);
+  if(q.r)document.getElementById('mic').onclick=startReading;
   else if(q.v)document.getElementById('audio').onclick=playQuestion;
   else startTimer();
 }

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0e0e0f" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Posture Coach MVP</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="toolbar">
+      <div>
+        <h1>Posture Coach MVP <span class="version">v0.2</span></h1>
+        <p>iPad 端姿態識別 · 先驗證信號，再做 UI</p>
+      </div>
+      <div class="actions">
+        <button id="cameraBtn" disabled>開啟鏡頭</button>
+        <button id="switchBtn" disabled>切換鏡頭</button>
+        <button id="calibrateBtn" disabled>校準基準</button>
+        <button id="recordBtn" disabled>開始記錄</button>
+        <button id="exportBtn" disabled>匯出 CSV</button>
+      </div>
+    </header>
+
+    <section id="compatBanner" class="compat-banner" hidden></section>
+
+    <section class="workspace">
+      <div class="camera-card">
+        <div class="stage" id="stage">
+          <video id="video" playsinline muted></video>
+          <canvas id="overlay"></canvas>
+          <div id="stageMessage" class="stage-message">模型載入中…</div>
+        </div>
+        <div class="status-row">
+          <span id="modelStatus" class="pill">模型：載入中</span>
+          <span id="cameraStatus" class="pill">鏡頭：未啟動</span>
+          <span id="baselineStatus" class="pill">基準：未校準</span>
+          <span id="secureStatus" class="pill">HTTPS：檢查中</span>
+          <span id="fpsStatus" class="pill">FPS：—</span>
+        </div>
+      </div>
+
+      <aside class="diagnostics">
+        <div class="overall" id="overallCard">
+          <span>目前狀態</span>
+          <strong id="overallStatus">等待開始</strong>
+        </div>
+        <div class="metric" data-key="headRoll">
+          <div><span>頭部側傾</span><strong id="headRollState">—</strong></div>
+          <small id="headRollValue">—</small>
+        </div>
+        <div class="metric" data-key="shoulderTilt">
+          <div><span>肩線傾斜</span><strong id="shoulderTiltState">—</strong></div>
+          <small id="shoulderTiltValue">—</small>
+        </div>
+        <div class="metric" data-key="bodyLean">
+          <div><span>軀幹側傾</span><strong id="bodyLeanState">—</strong></div>
+          <small id="bodyLeanValue">—</small>
+        </div>
+        <div class="metric" data-key="distance">
+          <div><span>距離過近</span><strong id="distanceState">—</strong></div>
+          <small id="distanceValue">—</small>
+        </div>
+        <div class="quality-card">
+          <div><span>Pose confidence</span><strong id="poseConfidence">—</strong></div>
+          <div><span>Baseline stability</span><strong id="baselineQuality">—</strong></div>
+          <div><span>Session samples</span><strong id="sampleCount">0</strong></div>
+        </div>
+        <details>
+          <summary>工程數據</summary>
+          <pre id="debugOutput">waiting...</pre>
+        </details>
+      </aside>
+    </section>
+
+    <footer>
+      <span>測試順序：正常校準 → 左右歪頭 → 軀幹側傾 → 真實寫字。</span>
+      <span>影像在裝置端進行姿態推理；此版本不是醫療診斷工具。</span>
+    </footer>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
